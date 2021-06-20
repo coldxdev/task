@@ -1,0 +1,134 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+@import 'reset';
+@import 'global';
+@import 'adaptive-value';
+
+
+
+
+
+
+.products {
+
+    &__inner {
+        padding: 100px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+        justify-items: center;
+        column-gap: 35px;
+        row-gap: 35px;
+    }
+}
+
+
+.products-item {
+    max-width: 300px;
+    min-height: 403px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 15px;
+    border: 1px solid #e2e2e2;
+
+    &--discount,
+    &--new {
+        position: relative;
+    }
+
+    &--discount::before,
+    &--new::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 55px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        vertical-align: baseline;
+        font-weight: 400;
+        border-radius: 0 0 25px 0;
+    }
+
+    &--discount::before {
+        content: '-20%';
+        font-size: 14px;
+        color: #fff;
+        background-color: $red;
+    }
+
+    &--new::before {
+        text-align: center;
+        content: "NEW";
+        font-size: 12.5px;
+        color: #151515;
+        background-color: $yellow;
+        font-weight: 500;
+    }
+
+    &__img {
+        margin: 0 auto 20px;
+        height: 225px;
+        max-width: 225px;
+        object-fit: contain;
+    }
+
+    &__class {
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #aeaeae;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        color: $primaryBlue;
+        text-decoration: underline;
+        margin-bottom: 20px;
+        display: inline-block
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price-old {
+        font-weight: 400;
+        color: #aeaeae;
+        text-decoration: line-through
+    }
+
+    &__price-new {
+        font-size: 18px;
+        font-weight: 500;
+        color: #272727;
+        position: relative;
+
+        & span {
+            vertical-align: top;
+            font-size: 10px;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        color: #101010;
+        border: none;
+        padding: 12px 40px;
+        background-color: $yellow;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: $yellowHover;
+
+        }
+    }
+}
+
+
+
+
+
+
+@import 'media';
