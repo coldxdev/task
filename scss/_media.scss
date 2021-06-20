@@ -1,6 +1,18 @@
-@media(max-width: 625px) {
-
+@media screen and (max-width: 1300px) {
     .products__item {
-        margin: 0 0 35px 0;
+        width: calc((100% - 70px) / 3);
+    }
+
+}
+
+@media screen and (max-width: 975px) {
+    .products__item {
+        width: calc((100% - 35px) / 2);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .products__item {
+        width: 100%;
     }
 }
